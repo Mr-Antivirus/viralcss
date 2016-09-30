@@ -6,10 +6,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 body {
-  margin: 0;
-  background-color: #bada55; }
+  background-color: #FDFFFC; }
 
 .container {
+  display: -webkit-flex;
+  /* Safari */
   display: flex;
-  padding-top: 10px;
-  padding-left: 10px; }
+  padding: 10px; }
+
+/*# sourceMappingURL=viralcss.css.map */

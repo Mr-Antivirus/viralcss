@@ -4,7 +4,11 @@
 // LICENSE file in the root directory of this source tree.
 
 .container {
+    display: -webkit-flex; /* Safari */
     display: flex;
-    padding-top: 10px;
-    padding-left: 10px;
+    padding: $padding;
+}
+
+.container p {
+    display: inherit;
 }
