@@ -12,7 +12,8 @@
     margin-left: auto;
     margin-right: auto;
     align-items: stretch;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    //justify-content: space-between;
 
     .row {
         flex-wrap: nowrap;
@@ -28,25 +29,31 @@
         flex-basis: 0;
         flex-direction: column;
         outline: 1px solid rgba(blue, 0.5); 
+
+        /* For testing purposes */
+        border: 1px solid transparentize(white, 0.25);
+        background-color: transparentize(white, 0.8);
+        color: transparentize(white, 0.1);
     }
 
     @for $i from 1 through $columnCount {
         .column-#{$i} {
-            flex-grow: #{$i / $columnCount};
-            flex-shrink: #{$i / $columnCount};   
+            flex-basis: floor(percentage($i / $columnCount));
+            max-width: floor(percentage($i / $columnCount));
+            padding-left: ($gutterWidth / 2);
+            padding-right: ($gutterWidth / 2);
 
             /* For testing purposes */
             border: 1px solid transparentize(white, 0.25);
             background-color: transparentize(white, 0.8);
             color: transparentize(white, 0.1);         
         }
-    }
 
-    .column {
-        /* For testing purposes */
-        border: 1px solid transparentize(white, 0.25);
-        background-color: transparentize(white, 0.8);
-        color: transparentize(white, 0.1);
+        // TODO: Figure out offsets
+        $marginPercent: floor(percentage($i / $columnCount));
+        .column-offset-#{$i} {
+            margin-left: calc(#{$marginPercent} + #{$gutterWidth});    
+        }
     }
 
     /** {

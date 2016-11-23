@@ -1,24 +1,37 @@
-var el = document.getElementById("container-frame").document.getElementById("grid-based");
+// Copyright 2016, Dennis Norton.
+// All rights reserved.
+// This source code is licensed under the MIT license found in the
+// LICENSE file in the root directory of this source tree.
 
-console.log('run')
-//Outer loop
-for (var i = 12; 1 > 0; i++) {
-    el.innerHTML += '<div class="container">' + innerLoop(i) + '</div>'
-}
+(function () {
+    var el = document.getElementById("grid-based");
+    var colData = [
+        [1,1,1,1,1,1,1,1,1,1,1,1], // 1
+        [2,2,2,2,2,2], // 2
+        [3,3,3,3], // 3
+        [4,4,4], // 4
+        [5,2,5], // 5
+        [6,6], // 6
+        [7,5], // 7
+        [8,4], // 8
+        [9,3], // 9
+        [10,2], // 10
+        [11,1], // 11
+        [12], // 12
+    ];
 
-
-// Inner loop
-function innerLoop(outerIndex) {
-    var column = "";
-
-    for (var i = 1; i < 13; i++) {
-        column += '<div class="column-' + i + '">1/' + i + '</div>'
+    //Outer loop
+    for (var i = 0; i < colData.length; i++) {
+        el.innerHTML += '<div class="container">' + innerLoop(colData[i],i) + '</div>'
     }
 
-    return column;
-}
-/*
-    <div class="container">
-        <div class="column-1">1/1</div>
-    </div>
-*/
+    // Inner loop
+    function innerLoop(data,index) {
+        var column = "";
+
+        for (var i = 0; i < data.length; i++) {
+            column += '<div class="column-' + data[i] + '">.column-' + data[i] + '</div>'
+        }
+        return column;
+    }
+})();

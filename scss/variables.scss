@@ -6,7 +6,7 @@
 $padding: 10px;
 $maxWidth: 100%;
 
-$gutterWidth: 10px;
+$gutterWidth: 30px;
 
 // FONT
 $font: 'Raleway', sans-serif;;
@@ -25,16 +25,3 @@ $backgroundGradient: linear-gradient(135deg, #b04, #f80) fixed;
 
 // GRID
 $columnCount: 12;
-
-$oneWide        : (1 / $columnCount * 100%);
-$twoWide        : (2 / $columnCount * 100%);
-$threeWide      : (3 / $columnCount * 100%);
-$fourWide       : (4 / $columnCount * 100%);
-$fiveWide       : (5 / $columnCount * 100%);
-$sixWide        : (6 / $columnCount * 100%);
-$sevenWide      : (7 / $columnCount * 100%);
-$eightWide      : (8 / $columnCount * 100%);
-$nineWide       : (9 / $columnCount * 100%);
-$tenWide        : (10 / $columnCount * 100%);
-$elevenWide     : (11 / $columnCount * 100%);
-$twelveWide     : (12 / $columnCount * 100%);

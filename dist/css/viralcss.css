@@ -17,7 +17,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   align-items: stretch;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   /** {
         outline: 1px solid rgba(blue, 0.5); 
     }*/ }
@@ -32,93 +32,140 @@ body {
     flex-shrink: 1;
     flex-basis: 0;
     flex-direction: column;
-    outline: 1px solid rgba(0, 0, 255, 0.5); }
+    outline: 1px solid rgba(0, 0, 255, 0.5);
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
   .container .column-1 {
-    flex-grow: 0.08333;
-    flex-shrink: 0.08333;
+    flex-basis: 8%;
+    max-width: 8%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-1 {
+    margin-left: calc(8% + 30px); }
   .container .column-2 {
-    flex-grow: 0.16667;
-    flex-shrink: 0.16667;
+    flex-basis: 16%;
+    max-width: 16%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-2 {
+    margin-left: calc(16% + 30px); }
   .container .column-3 {
-    flex-grow: 0.25;
-    flex-shrink: 0.25;
+    flex-basis: 25%;
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-3 {
+    margin-left: calc(25% + 30px); }
   .container .column-4 {
-    flex-grow: 0.33333;
-    flex-shrink: 0.33333;
+    flex-basis: 33%;
+    max-width: 33%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-4 {
+    margin-left: calc(33% + 30px); }
   .container .column-5 {
-    flex-grow: 0.41667;
-    flex-shrink: 0.41667;
+    flex-basis: 41%;
+    max-width: 41%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-5 {
+    margin-left: calc(41% + 30px); }
   .container .column-6 {
-    flex-grow: 0.5;
-    flex-shrink: 0.5;
+    flex-basis: 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-6 {
+    margin-left: calc(50% + 30px); }
   .container .column-7 {
-    flex-grow: 0.58333;
-    flex-shrink: 0.58333;
+    flex-basis: 58%;
+    max-width: 58%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-7 {
+    margin-left: calc(58% + 30px); }
   .container .column-8 {
-    flex-grow: 0.66667;
-    flex-shrink: 0.66667;
+    flex-basis: 66%;
+    max-width: 66%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-8 {
+    margin-left: calc(66% + 30px); }
   .container .column-9 {
-    flex-grow: 0.75;
-    flex-shrink: 0.75;
+    flex-basis: 75%;
+    max-width: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-9 {
+    margin-left: calc(75% + 30px); }
   .container .column-10 {
-    flex-grow: 0.83333;
-    flex-shrink: 0.83333;
+    flex-basis: 83%;
+    max-width: 83%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-10 {
+    margin-left: calc(83% + 30px); }
   .container .column-11 {
-    flex-grow: 0.91667;
-    flex-shrink: 0.91667;
+    flex-basis: 91%;
+    max-width: 91%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-11 {
+    margin-left: calc(91% + 30px); }
   .container .column-12 {
-    flex-grow: 1;
-    flex-shrink: 1;
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
     /* For testing purposes */
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9); }
-  .container .column {
-    /* For testing purposes */
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.9); }
+  .container .column-offset-12 {
+    margin-left: calc(100% + 30px); }
