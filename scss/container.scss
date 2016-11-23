@@ -2,13 +2,54 @@
 // All rights reserved.
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
+@import "variables";
 
 .container {
     display: -webkit-flex; /* Safari */
     display: flex;
     padding: $padding;
-}
+    max-width: $maxWidth !important;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+    flex-wrap: wrap;
 
-.container p {
-    display: inherit;
+    .row {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        flex-grow: 1;
+        outline: 1px solid rgba(green, 0.5); 
+    }
+
+    .column {
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        flex-direction: column;
+        outline: 1px solid rgba(blue, 0.5); 
+    }
+
+    @for $i from 1 through $columnCount {
+        .column-#{$i} {
+            flex-grow: #{$i / $columnCount};
+            flex-shrink: #{$i / $columnCount};   
+
+            /* For testing purposes */
+            border: 1px solid transparentize(white, 0.25);
+            background-color: transparentize(white, 0.8);
+            color: transparentize(white, 0.1);         
+        }
+    }
+
+    .column {
+        /* For testing purposes */
+        border: 1px solid transparentize(white, 0.25);
+        background-color: transparentize(white, 0.8);
+        color: transparentize(white, 0.1);
+    }
+
+    /** {
+        outline: 1px solid rgba(blue, 0.5); 
+    }*/
 }

@@ -67,21 +67,21 @@ gulp.task('browser-sync', function () {
 });
 
 // Static Server + watching scss/html files
-gulp.task('serve',  function () {
+gulp.task('serve', ['sass'], function () {
     browserSync.init({
         server: ['examples', 'dist']
     });
 
-    //gulp.watch("scss/**/*.scss", ['sass:inject']);
+    gulp.watch("scss/**/*.scss", ['sass:inject']);
     gulp.watch("examples/*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass:inject', function () {
-    return gulp.src("scss/**/*.scss")
+    return gulp.src("scss/viralcss.scss")
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(chmod(chmodOptions))
-        .pipe(gulp.dest("examples/css/*"))
+        .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
 });
 

@@ -9,7 +9,7 @@
 @import 'variables';
 
 body { 
-  background-color: $background; 
+  background: $backgroundGradient; 
 }
 
 @import 'container';

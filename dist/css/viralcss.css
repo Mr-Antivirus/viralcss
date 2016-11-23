@@ -6,12 +6,119 @@
  * LICENSE file in the root directory of this source tree.
  */
 body {
-  background-color: #FDFFFC; }
+  background: linear-gradient(135deg, #b04, #f80) fixed; }
 
 .container {
   display: -webkit-flex;
   /* Safari */
   display: flex;
-  padding: 10px; }
-
-/*# sourceMappingURL=viralcss.css.map */
+  padding: 10px;
+  max-width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
+  flex-wrap: wrap;
+  /** {
+        outline: 1px solid rgba(blue, 0.5); 
+    }*/ }
+  .container .row {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-grow: 1;
+    outline: 1px solid rgba(0, 128, 0, 0.5); }
+  .container .column {
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    flex-direction: column;
+    outline: 1px solid rgba(0, 0, 255, 0.5); }
+  .container .column-1 {
+    flex-grow: 0.08333;
+    flex-shrink: 0.08333;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-2 {
+    flex-grow: 0.16667;
+    flex-shrink: 0.16667;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-3 {
+    flex-grow: 0.25;
+    flex-shrink: 0.25;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-4 {
+    flex-grow: 0.33333;
+    flex-shrink: 0.33333;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-5 {
+    flex-grow: 0.41667;
+    flex-shrink: 0.41667;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-6 {
+    flex-grow: 0.5;
+    flex-shrink: 0.5;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-7 {
+    flex-grow: 0.58333;
+    flex-shrink: 0.58333;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-8 {
+    flex-grow: 0.66667;
+    flex-shrink: 0.66667;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-9 {
+    flex-grow: 0.75;
+    flex-shrink: 0.75;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-10 {
+    flex-grow: 0.83333;
+    flex-shrink: 0.83333;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-11 {
+    flex-grow: 0.91667;
+    flex-shrink: 0.91667;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column-12 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
+  .container .column {
+    /* For testing purposes */
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9); }
