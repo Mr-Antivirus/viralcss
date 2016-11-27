@@ -1,0 +1,158 @@
+/*!
+ * Copyright 2016, Dennis Norton.
+ * All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+// Font
+html,
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+}
+
+// paragraphs
+p {
+  margin: 0 0 10px;
+}
+
+// Highlight
+mark { 
+  background-color: $backgroundGradient; 
+}
+
+// Small text
+small {
+  font-size: 85%;
+}
+
+// Text alignment
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+
+// Transformations
+.text-lower {
+  text-transform: lowercase;
+}
+.text-upper {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// Abbreviation
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #777;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Address
+address {
+  a,
+  strong {
+    font-style: normal;
+  }
+}
+
+// Blockquote
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &.reverse {
+    border-right: 5px solid #ddd;
+    padding-left: 0;
+    text-align: right;
+    footer::after {
+      content: ' \2014 \00A0'; // Long hyphen
+    }
+  }
+  &:not(.reverse) {
+    border-left: 5px solid #ddd;
+    footer::before {
+      content: '\2014 \00A0'; // Long hyphen
+    }
+  }
+  footer {
+    display: block;
+    font-size: 80%;
+    color: #777;
+  }
+}
+
+// Lists
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul {
+  &.unstyled {
+    padding-left: 0;
+    list-style: none;
+  }
+  &.inline {
+    padding-left: 0;
+    margin-left: -5px;
+    li {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  dt {
+    font-weight: 700;
+  }
+
+  dd {
+    margin-left: 40px;
+  }
+
+  &.horizontal {
+    dt {
+      float: left;
+      width: 160px;
+      overflow: hidden;
+      clear: left;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    dd {
+      margin-left: 170px;
+    }
+  }
+}

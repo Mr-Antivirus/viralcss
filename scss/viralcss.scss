@@ -8,8 +8,14 @@
 
 @import 'variables';
 
-body { 
+#container-body { 
   background: $backgroundGradient; 
 }
 
+body { 
+  background: $background; 
+  line-height: $lineHeight;  
+}
+
 @import 'container';
+@import 'typography';

@@ -5,8 +5,13 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-body {
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+#container-body {
   background: linear-gradient(135deg, #b04, #f80) fixed; }
+
+body {
+  background: #fff;
+  line-height: 1.42857; }
 
 .container {
   display: -webkit-flex;
@@ -169,3 +174,117 @@ body {
     color: rgba(255, 255, 255, 0.9); }
   .container .column-offset-12 {
     margin-left: calc(100% + 30px); }
+
+/*!
+ * Copyright 2016, Dennis Norton.
+ * All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+html,
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-size: 14px; }
+
+p {
+  margin: 0 0 10px; }
+
+mark {
+  background-color: linear-gradient(135deg, #b04, #f80) fixed; }
+
+small {
+  font-size: 85%; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text-lower {
+  text-transform: lowercase; }
+
+.text-upper {
+  text-transform: uppercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #777; }
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase; }
+
+address a,
+address strong {
+  font-style: normal; }
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px; }
+  blockquote:last-child {
+    margin-bottom: 0; }
+  blockquote.reverse {
+    border-right: 5px solid #ddd;
+    padding-left: 0;
+    text-align: right; }
+    blockquote.reverse footer::after {
+      content: ' \2014 \00A0'; }
+  blockquote:not(.reverse) {
+    border-left: 5px solid #ddd; }
+    blockquote:not(.reverse) footer::before {
+      content: '\2014 \00A0'; }
+  blockquote footer {
+    display: block;
+    font-size: 80%;
+    color: #777; }
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 10px; }
+
+ul.unstyled {
+  padding-left: 0;
+  list-style: none; }
+
+ul.inline {
+  padding-left: 0;
+  margin-left: -5px; }
+  ul.inline li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px; }
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px; }
+  dl dt {
+    font-weight: 700; }
+  dl dd {
+    margin-left: 40px; }
+  dl.horizontal dt {
+    float: left;
+    width: 160px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  dl.horizontal dd {
+    margin-left: 170px; }
